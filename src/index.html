@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>SQL Schema Analyzer</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidebar">
+        <h2>Schema</h2>
+        <ul id="schema-tree"></ul>
+      </div>
+      
+      <div class="content">
+        <header class="header">
+          <h1>Database Analysis Report</h1>
+          <button id="loadFileBtn">Load SQL File</button>
+        </header>
+        
+        <div id="dashboard" class="dashboard">
+          <div class="stat-card">
+            <h3>Database Name</h3>
+            <p id="db-name">-</p>
+          </div>
+          <div class="stat-card">
+            <h3>Total Tables</h3>
+            <p id="total-tables">0</p>
+          </div>
+          <div class="stat-card">
+            <h3>Total Columns</h3>
+            <p id="total-columns">0</p>
+          </div>
+          <div class="stat-card">
+            <h3>Total Records</h3>
+            <p id="total-records">0</p>
+          </div>
+        </div>
+        
+        <div id="table-details" class="table-details">
+          <h2>Table Details</h2>
+          <div id="table-info">
+            <p>Select a table from the schema to view details</p>
+          </div>
+        </div>
+        
+        <div class="actions">
+          <button id="exportPdfBtn">Export as PDF</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,270 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Main container layout */
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Sidebar styles */
+.sidebar {
+  width: 280px;
+  background-color: #252526;
+  border-right: 1px solid #3e3e42;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.sidebar h2 {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #3e3e42;
+}
+
+#schema-tree {
+  list-style: none;
+}
+
+#schema-tree li {
+  padding: 8px 0;
+  cursor: pointer;
+  border-radius: 4px;
+  padding-left: 8px;
+  transition: background-color 0.2s ease;
+}
+
+#schema-tree li:hover {
+  background-color: #37373d;
+}
+
+#schema-tree li.table-item {
+  color: #4fc3f7;
+  font-weight: 500;
+}
+
+#schema-tree li.column-item {
+  color: #a5d6a7;
+  font-size: 14px;
+  margin-left: 16px;
+}
+
+/* Content area styles */
+.content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: #1e1e1e;
+}
+
+/* Header styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #3e3e42;
+}
+
+.header h1 {
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+/* Button styles */
+button {
+  background-color: #007acc;
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+button:hover {
+  background-color: #005a9e;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 122, 204, 0.3);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 122, 204, 0.3);
+}
+
+#exportPdfBtn {
+  background-color: #28a745;
+}
+
+#exportPdfBtn:hover {
+  background-color: #218838;
+  box-shadow: 0 4px 8px rgba(40, 167, 69, 0.3);
+}
+
+/* Dashboard styles */
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  background-color: #252526;
+  border: 1px solid #3e3e42;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.stat-card h3 {
+  color: #b0b0b0;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-card p {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* Table details styles */
+.table-details {
+  background-color: #252526;
+  border: 1px solid #3e3e42;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.table-details h2 {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #3e3e42;
+}
+
+#table-info {
+  color: #b0b0b0;
+  line-height: 1.6;
+}
+
+#table-info p {
+  margin-bottom: 10px;
+}
+
+/* Actions section */
+.actions {
+  text-align: center;
+  padding-top: 20px;
+}
+
+/* Table structure display */
+.table-structure {
+  margin-top: 20px;
+}
+
+.table-structure table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #1e1e1e;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.table-structure th,
+.table-structure td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #3e3e42;
+}
+
+.table-structure th {
+  background-color: #37373d;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.table-structure td {
+  color: #e0e0e0;
+  font-size: 14px;
+}
+
+.table-structure tr:hover {
+  background-color: #2d2d30;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e1e1e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3e3e42;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4e4e52;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  
+  .sidebar {
+    width: 100%;
+    height: 200px;
+  }
+  
+  .dashboard {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+}
